@@ -1,23 +1,38 @@
-# Five Card Draw Poker (CLI)
+# Five Card Draw (Python CLI)
 
-This is my first real Python project: a terminal-based **Five Card Draw Poker game**. It’s part of my personal journey into full-time software development and machine learning.
+This is my first major Python project — a command-line implementation of the classic card game **Five Card Draw**. The project is modular and designed for scalability and learning, combining core Python skills with version control and good coding practices.
 
-This repo is being used to:
-- Learn Python (object-oriented programming, functions, file structure)
-- Practice Git and GitHub workflows
-- Build a portfolio of hands-on projects
-- Simulate a real freelance dev process from start to finish
+---
 
-## What's Working So Far
+## Current Modules
 
-- [x] Created and tested `Deck` class
-- [x] Generated a 52-card deck using list comprehension
-- [x] Shuffle functionality added
-- [x] Deal method implemented and tested
-- [x] First commit and push to GitHub from terminal
-- [x] Environment fully configured on Pop!_OS
+### ✅ `deck.py`
+- Creates and shuffles a standard 52-card deck
+- Supports dealing any number of cards from the deck
 
-## How to Run It
+### ✅ `poker.py`
+- Evaluates poker hands (Pair, Two Pair, Three of a Kind, etc.)
+- Includes logic for scoring and tiebreaking between hands
+- Supports Royal Flush, Straight Flush, and low-Ace logic
+- Returns both a string label and numeric score for comparisons
 
-```bash
-python3 deck.py
+---
+
+## Goals of This Project
+- Strengthen understanding of **Object-Oriented Programming (OOP)**
+- Build modular, testable Python scripts
+- Learn **Git & GitHub** version control workflow
+- Prepare for future additions like player management, betting, and UI
+
+---
+
+## Upcoming
+- `player.py`: Player objects with chip counts, hands, and actions
+- `main.py`: Full playable Five Card Draw loop with betting and turns
+- Later: Possible GUI with Tkinter or integration into a web app
+
+---
+
+## Notes
+- This project is being tracked and updated via Git and GitHub.
+- The code is for educational purposes but aims for real-world structure.
