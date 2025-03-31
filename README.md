@@ -1,35 +1,72 @@
-# 🃏 Five Card Draw (CLI + GUI Project)
+# ♠️ Five Card Draw Poker (Python Edition)
 
-This is a fully functional Python-based **Five Card Draw Poker game**, built using clean object-oriented principles and modular design.
-
-### ✅ CLI Version: Complete
-The command-line version includes:
-- Full 5-card draw logic
-- Modular player, deck, and hand evaluation systems
-- Pre-draw and post-draw betting phases
-- CPU player logic and fold/bluff system
-- Round loop that allows continuous play
-- Full showdown and pot distribution
-- Clean architecture, reusable for GUI version
-
-### 🛠️ In Progress: GUI Version (Tkinter)
-Now entering **Phase 2** of the project:
-- 🎨 Tkinter-powered GUI
-- 🟢 Retro green poker felt design
-- 🎴 Interactive buttons for play/fold/discard
-- 🖼️ Card image rendering
-- 🔊 Casino-inspired sound effects
-
-This project will showcase:
-- Advanced OOP in Python
-- GUI development with `tkinter`
-- Game logic integration
-- Data flow between logic and interface
+Welcome to **Five Card Draw**, a terminal + GUI-based poker game built entirely in Python from scratch.  
+This project is part of a larger portfolio to demonstrate OOP mastery, data handling, and GUI design.
 
 ---
 
-### 💡 Project Goals
-- 🧰 Serve as a portfolio-ready, real-world Python application
-- 👨‍💻 Highlight strong understanding of OOP, game state management, and modular architecture
-- 🎯 Demonstrate readiness for freelance + dev roles
+## 🎯 Project Overview
 
+This is a fully playable CLI poker game modeled after classic **Five Card Draw** rules, now entering GUI development using **Tkinter**.
+
+Built 100% modular with a focus on:
+- Clean object-oriented design
+- User-friendly gameplay
+- Expandable features (GUI, AI betting logic, multiplayer, etc.)
+
+---
+
+## ✅ Current Features (Completed)
+
+### 🧠 Core Game Logic:
+- Full game loop: betting, discarding, drawing, and showdown
+- OOP design with `Player`, `Deck`, and `Game` classes
+- Basic CPU logic for betting & folding
+- Hand evaluation system (`poker.py`) with ranking from High Card to Royal Flush
+- Game loops automatically into new rounds
+
+### 🖥️ CLI Game:
+- Fully playable in the terminal
+- Includes card handling, betting, and win detection
+
+### 🧩 GUI Progress:
+- Main Menu screen (Tkinter)
+- Green poker felt background
+- Royal Flush placeholder title
+- Start Game popup with:
+  - Name input
+  - Player count selection (2–4 players)
+- Buttons for "Start Game", "Rules", and "Exit"
+- Modular GUI setup with reusable styles in `gui_units.py`
+
+---
+
+## 🛠️ To Do (Next Phases)
+
+### Phase 2: GUI Game Window
+- Build the game screen for displaying player hands
+- Highlight/select cards to discard (keyboard support)
+- Add betting and game flow with GUI buttons
+- Handle win logic and reset in GUI
+
+### Phase 3: Visual Polish
+- Custom card visuals or font-based rendering
+- Card animations (optional)
+- Sound effects (chip sounds, win effects, etc.)
+
+### Phase 4: Final Touches
+- Responsive resolution scaling
+- Final README polish with media
+- Optional: Create an executable `.exe` or `.app` for easy sharing
+
+---
+
+## 🚀 How to Run
+
+### Requirements:
+- Python 3.10+
+- No external libraries (pure Python + Tkinter)
+
+### Run CLI Game:
+```bash
+python3 game.py
