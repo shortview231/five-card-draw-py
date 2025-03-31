@@ -1,38 +1,35 @@
-# Five Card Draw (Python CLI)
+# 🃏 Five Card Draw (CLI + GUI Project)
 
-This is my first major Python project — a command-line implementation of the classic card game **Five Card Draw**. The project is modular and designed for scalability and learning, combining core Python skills with version control and good coding practices.
+This is a fully functional Python-based **Five Card Draw Poker game**, built using clean object-oriented principles and modular design.
 
----
+### ✅ CLI Version: Complete
+The command-line version includes:
+- Full 5-card draw logic
+- Modular player, deck, and hand evaluation systems
+- Pre-draw and post-draw betting phases
+- CPU player logic and fold/bluff system
+- Round loop that allows continuous play
+- Full showdown and pot distribution
+- Clean architecture, reusable for GUI version
 
-## Current Modules
+### 🛠️ In Progress: GUI Version (Tkinter)
+Now entering **Phase 2** of the project:
+- 🎨 Tkinter-powered GUI
+- 🟢 Retro green poker felt design
+- 🎴 Interactive buttons for play/fold/discard
+- 🖼️ Card image rendering
+- 🔊 Casino-inspired sound effects
 
-### ✅ `deck.py`
-- Creates and shuffles a standard 52-card deck
-- Supports dealing any number of cards from the deck
-
-### ✅ `poker.py`
-- Evaluates poker hands (Pair, Two Pair, Three of a Kind, etc.)
-- Includes logic for scoring and tiebreaking between hands
-- Supports Royal Flush, Straight Flush, and low-Ace logic
-- Returns both a string label and numeric score for comparisons
-
----
-
-## Goals of This Project
-- Strengthen understanding of **Object-Oriented Programming (OOP)**
-- Build modular, testable Python scripts
-- Learn **Git & GitHub** version control workflow
-- Prepare for future additions like player management, betting, and UI
-
----
-
-## Upcoming
-- `player.py`: Player objects with chip counts, hands, and actions
-- `main.py`: Full playable Five Card Draw loop with betting and turns
-- Later: Possible GUI with Tkinter or integration into a web app
+This project will showcase:
+- Advanced OOP in Python
+- GUI development with `tkinter`
+- Game logic integration
+- Data flow between logic and interface
 
 ---
 
-## Notes
-- This project is being tracked and updated via Git and GitHub.
-- The code is for educational purposes but aims for real-world structure.
+### 💡 Project Goals
+- 🧰 Serve as a portfolio-ready, real-world Python application
+- 👨‍💻 Highlight strong understanding of OOP, game state management, and modular architecture
+- 🎯 Demonstrate readiness for freelance + dev roles
+
