@@ -36,7 +36,6 @@ button_frame.pack(side="bottom", pady=50)
 
 # ==Button Functions==
 def start_game():
-    
     popup = tk.Toplevel(root)
     popup.title("Game Setup")
     popup.geometry("400x250")
