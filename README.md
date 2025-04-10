@@ -61,6 +61,43 @@ Built 100% modular with a focus on:
 
 ---
 
+
+# 🎴 Five Card Draw Poker – Game GUI
+
+This section of the project handles the full graphical interface for the **Five Card Draw Poker** game. It uses `tkinter` and `Pillow` to render card images, position players around a virtual poker table, and scale/rotate cards for a visually immersive layout.
+
+---
+
+## 🖥️ What This GUI Does
+
+- Displays a full poker table layout with 2–4 players
+- Shows 5-card hands for each player
+- Rotates CPU player cards to simulate table angles
+- Scales card sizes (player hand is larger, CPUs are smaller)
+- Includes vertical name labels for CPU2 (left) and CPU3 (right)
+- Displays player name and welcome message
+
+---
+
+## 🧠 Technical Features
+
+- **Card Rendering**: Cards are dynamically loaded from image files, scaled, and rotated using `Pillow` (`ImageTk`).
+- **Player Positioning**:
+  - `CPU 1` at top center
+  - `CPU 2` left (cards vertical, name aligned vertically)
+  - `CPU 3` right (cards vertical, name aligned vertically)
+  - `PLAYER` at bottom center (larger hand, full-size)
+- **Card Assets**:
+  - Based on the [`kenney_playing-cards-pack`](https://kenney.nl/assets/playing-cards)
+  - Uses "large" image variant by default
+- **Responsive Layout**: GUI adapts based on player count and keeps all elements on screen within a `1280x720` window
+
+---
+
+## 📂 Folder Structure
+
+
+
 ## 🚀 How to Run
 
 ### Requirements:
