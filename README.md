@@ -1,109 +1,134 @@
 # ♠️ Five Card Draw Poker (Python Edition)
 
-Welcome to **Five Card Draw**, a terminal + GUI-based poker game built entirely in Python from scratch.  
-This project is part of a larger portfolio to demonstrate OOP mastery, data handling, and GUI design.
+Welcome to **Five Card Draw**, a poker game built entirely in Python.
+It started as my **first ever Python project**, before I knew Git or GitHub — and has grown into a showcase of my **OOP design**, **CLI development**, and **early GUI experiments**.
+
+This project is a **work in progress**: core game logic works, the CLI is playable, and the GUI is underway. The unfinished edges are intentional — they highlight my learning curve, problem-solving process, and commitment to building real projects.
 
 ---
 
 ## 🎯 Project Overview
 
-This is a fully playable CLI poker game modeled after classic **Five Card Draw** rules, now entering GUI development using **Tkinter**.
+Classic **Five Card Draw poker**, designed with:
 
-Built 100% modular with a focus on:
-- Clean object-oriented design
-- User-friendly gameplay
-- Expandable features (GUI, AI betting logic, multiplayer, etc.)
-
----
-
-## ✅ Current Features (Completed)
-
-### 🧠 Core Game Logic:
-- Full game loop: betting, discarding, drawing, and showdown
-- OOP design with `Player`, `Deck`, and `Game` classes
-- Basic CPU logic for betting & folding
-- Hand evaluation system (`poker.py`) with ranking from High Card to Royal Flush
-- Game loops automatically into new rounds
-
-### 🖥️ CLI Game:
-- Fully playable in the terminal
-- Includes card handling, betting, and win detection
-
-### 🧩 GUI Progress:
-- Main Menu screen (Tkinter)
-- Green poker felt background
-- Royal Flush placeholder title
-- Start Game popup with:
-  - Name input
-  - Player count selection (2–4 players)
-- Buttons for "Start Game", "Rules", and "Exit"
-- Modular GUI setup with reusable styles in `gui_units.py`
+* Clean object-oriented classes (`Card`, `Deck`, `Player`, `Game`)
+* A playable CLI loop
+* A GUI prototype using **Tkinter** (with future plans for polish)
+* Expandable architecture for AI, betting, and more
 
 ---
 
-## 🛠️ To Do (Next Phases)
+## ✅ Current Features
 
-### Phase 2: GUI Game Window
-- Build the game screen for displaying player hands
-- Highlight/select cards to discard (keyboard support)
-- Add betting and game flow with GUI buttons
-- Handle win logic and reset in GUI
+### 🧠 Core Logic
 
-### Phase 3: Visual Polish
-- Custom card visuals or font-based rendering
-- Card animations (optional)
-- Sound effects (chip sounds, win effects, etc.)
+* Deal phase: player + CPU receive 5 cards
+* Player can **play or fold**
+* Discard phase (WIP): GUI allows selection, but logic still forces discard
+* Basic CPU behavior
 
-### Phase 4: Final Touches
-- Responsive resolution scaling
-- Final README polish with media
-- Optional: Create an executable `.exe` or `.app` for easy sharing
+### 🖥️ CLI Version
 
----
+* Fully playable in terminal
+* Card dealing, hand evaluation, and round resets
 
+### 🎴 GUI Progress
 
-# 🎴 Five Card Draw Poker – Game GUI
+* Main Menu screen (Tkinter)
+* Poker felt background + Royal Flush placeholder title
+* Start Game popup with:
 
-This section of the project handles the full graphical interface for the **Five Card Draw Poker** game. It uses `tkinter` and `Pillow` to render card images, position players around a virtual poker table, and scale/rotate cards for a visually immersive layout.
-
----
-
-## 🖥️ What This GUI Does
-
-- Displays a full poker table layout with 2–4 players
-- Shows 5-card hands for each player
-- Rotates CPU player cards to simulate table angles
-- Scales card sizes (player hand is larger, CPUs are smaller)
-- Includes vertical name labels for CPU2 (left) and CPU3 (right)
-- Displays player name and welcome message
+  * Name input
+  * Player count (2–4)
+* Buttons for **Start Game**, **Rules**, **Exit**
+* Modular GUI setup (`gui_units.py`)
 
 ---
 
-## 🧠 Technical Features
+## 🛠️ Work in Progress
 
-- **Card Rendering**: Cards are dynamically loaded from image files, scaled, and rotated using `Pillow` (`ImageTk`).
-- **Player Positioning**:
-  - `CPU 1` at top center
-  - `CPU 2` left (cards vertical, name aligned vertically)
-  - `CPU 3` right (cards vertical, name aligned vertically)
-  - `PLAYER` at bottom center (larger hand, full-size)
-- **Card Assets**:
-  - Based on the [`kenney_playing-cards-pack`](https://kenney.nl/assets/playing-cards)
-  - Uses "large" image variant by default
-- **Responsive Layout**: GUI adapts based on player count and keeps all elements on screen within a `1280x720` window
+### What works:
+
+* Dealing, folding, discarding (partially), and restarting rounds
+* CLI end-to-end play
+
+### What I’m still fixing:
+
+* GUI **discard logic**: need to allow “keep all cards”
+* GUI **game screen**: show player + CPU hands properly
+* Betting system (planned, not implemented yet)
+
+---
+
+## 📌 Roadmap
+
+* [ ] Fix discard logic (don’t force discard)
+* [ ] Expand GUI for full gameplay
+* [ ] Add CPU strategy for discards/betting
+* [ ] Hand evaluation tie-breaks
+* [ ] Visual polish: custom cards, animations, chip sounds
+* [ ] Package as `.exe` / `.app` for easy sharing
+
+---
+
+## 🚀 How to Run
+
+### Requirements
+
+* Python 3.10+
+* Tkinter (comes standard)
+* Pillow (for image scaling/rotation in GUI)
+
+### Run CLI Game
+
+```bash
+python3 game.py
+```
+
+### Run GUI Prototype
+
+```bash
+python3 gui.py
+```
 
 ---
 
 ## 📂 Folder Structure
 
+```
+five-card-draw-py/
+│── src/
+│   ├── card.py        # Card class
+│   ├── deck.py        # Deck class
+│   ├── player.py      # Player logic
+│   ├── game.py        # CLI loop
+│   └── gui.py         # GUI prototype
+│
+│── assets/
+│   ├── screenshots/
+│   │   ├── start.png
+│   │   ├── deal.png
+│   │   └── discard.png
+│   └── cards/         # Card image assets
+│
+│── README.md
+│── requirements.txt
+```
 
+---
 
-## 🚀 How to Run
+## 📸 Screenshots *(to add)*
 
-### Requirements:
-- Python 3.10+
-- No external libraries (pure Python + Tkinter)
+* Start Screen
+* Deal Phase
+* Discard Phase (WIP)
 
-### Run CLI Game:
-```bash
-python3 game.py
+---
+
+## ✍️ Author
+
+**Robert Sory Jr. (RJ)**
+
+* Portfolio: [shortview231.github.io](https://shortview231.github.io/)
+* GitHub: [@shortview231](https://github.com/shortview231)
+* LinkedIn: [Robert Sory Jr.](https://www.linkedin.com/in/robert-sory-1ab752213)
