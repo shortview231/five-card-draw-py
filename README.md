@@ -1,134 +1,78 @@
 # ♠️ Five Card Draw Poker (Python Edition)
 
-Welcome to **Five Card Draw**, a poker game built entirely in Python.
-It started as my **first ever Python project**, before I knew Git or GitHub — and has grown into a showcase of my **OOP design**, **CLI development**, and **early GUI experiments**.
+**Five Card Draw** started as my first Python project, before I knew Git or GitHub. It has grown into a small playable desktop game that preserves the original learning project while adding a finished Windows-classic edition.
 
-This project is a **work in progress**: core game logic works, the CLI is playable, and the GUI is underway. The unfinished edges are intentional — they highlight my learning curve, problem-solving process, and commitment to building real projects.
+## Windows Classic Edition
 
----
+The revival build lives in `five_card_drae.py/windows_classic.py` and is designed to resemble a late-1990s/early-2000s Windows card game.
 
-## 🎯 Project Overview
+### Features
 
-Classic **Five Card Draw poker**, designed with:
+- Full five-card draw round loop
+- Opening betting round
+- Player fold/bet actions
+- Select and replace 0–3 cards
+- CPU discard strategy
+- Final betting round
+- Full showdown and tie handling
+- Persistent chips between rounds
+- Correct poker hand evaluation and tie breakers
+- Classic gray Windows controls, blue title bar, menus, status bar, and green card table
+- No external card-image assets required for the classic edition
 
-* Clean object-oriented classes (`Card`, `Deck`, `Player`, `Game`)
-* A playable CLI loop
-* A GUI prototype using **Tkinter** (with future plans for polish)
-* Expandable architecture for AI, betting, and more
-
----
-
-## ✅ Current Features
-
-### 🧠 Core Logic
-
-* Deal phase: player + CPU receive 5 cards
-* Player can **play or fold**
-* Discard phase (WIP): GUI allows selection, but logic still forces discard
-* Basic CPU behavior
-
-### 🖥️ CLI Version
-
-* Fully playable in terminal
-* Card dealing, hand evaluation, and round resets
-
-### 🎴 GUI Progress
-
-* Main Menu screen (Tkinter)
-* Poker felt background + Royal Flush placeholder title
-* Start Game popup with:
-
-  * Name input
-  * Player count (2–4)
-* Buttons for **Start Game**, **Rules**, **Exit**
-* Modular GUI setup (`gui_units.py`)
-
----
-
-## 🛠️ Work in Progress
-
-### What works:
-
-* Dealing, folding, discarding (partially), and restarting rounds
-* CLI end-to-end play
-
-### What I’m still fixing:
-
-* GUI **discard logic**: need to allow “keep all cards”
-* GUI **game screen**: show player + CPU hands properly
-* Betting system (planned, not implemented yet)
-
----
-
-## 📌 Roadmap
-
-* [ ] Fix discard logic (don’t force discard)
-* [ ] Expand GUI for full gameplay
-* [ ] Add CPU strategy for discards/betting
-* [ ] Hand evaluation tie-breaks
-* [ ] Visual polish: custom cards, animations, chip sounds
-* [ ] Package as `.exe` / `.app` for easy sharing
-
----
-
-## 🚀 How to Run
-
-### Requirements
-
-* Python 3.10+
-* Tkinter (comes standard)
-* Pillow (for image scaling/rotation in GUI)
-
-### Run CLI Game
+### Run
 
 ```bash
-python3 game.py
+cd five_card_drae.py
+python3 windows_classic.py
 ```
 
-### Run GUI Prototype
+The classic build uses only Python's standard-library Tkinter modules.
+
+## Original Project
+
+The repository intentionally keeps the earlier CLI and experimental image-based GUI because they show the project's development history.
+
+### Core modules
+
+- `deck.py` - 52-card deck and dealing
+- `player.py` - player state, chips, folding and discarding
+- `poker.py` - poker hand classification and full tie-breaking scores
+- `game.py` - original reusable game engine
+- `fcd_GUI/` - original Tkinter/table-image experiment
+- `windows_classic.py` - finished classic desktop edition
+- `test_poker.py` - regression tests for poker hand evaluation
+
+## Tests
+
+From `five_card_drae.py`:
 
 ```bash
-python3 gui.py
+python3 -m unittest test_poker.py
 ```
 
----
+The regression suite covers all ten standard poker hand categories, ace-low straights, pair kicker tie breakers, and two-pair comparisons.
 
-## 📂 Folder Structure
+## Hand Ranking
 
-```
-five-card-draw-py/
-│── src/
-│   ├── card.py        # Card class
-│   ├── deck.py        # Deck class
-│   ├── player.py      # Player logic
-│   ├── game.py        # CLI loop
-│   └── gui.py         # GUI prototype
-│
-│── assets/
-│   ├── screenshots/
-│   │   ├── start.png
-│   │   ├── deal.png
-│   │   └── discard.png
-│   └── cards/         # Card image assets
-│
-│── README.md
-│── requirements.txt
-```
+1. Royal Flush
+2. Straight Flush
+3. Four of a Kind
+4. Full House
+5. Flush
+6. Straight
+7. Three of a Kind
+8. Two Pair
+9. Pair
+10. High Card
 
----
+## Original GUI Prototype
 
-## 📸 Screenshots *(to add)*
+The earlier `fcd_GUI` implementation remains available for continued experimentation with card images and a four-seat felt-table layout. It is preserved rather than overwritten by the Windows Classic edition.
 
-* Start Screen
-* Deal Phase
-* Discard Phase (WIP)
-
----
-
-## ✍️ Author
+## Author
 
 **Robert Sory Jr. (RJ)**
 
-* Portfolio: [shortview231.github.io](https://shortview231.github.io/)
-* GitHub: [@shortview231](https://github.com/shortview231)
-* LinkedIn: [Robert Sory Jr.](https://www.linkedin.com/in/robert-sory-1ab752213)
+- Portfolio: https://shortview231.github.io/
+- GitHub: @shortview231
