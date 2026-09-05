@@ -1,134 +1,51 @@
-# ♠️ Five Card Draw Poker (Python Edition)
+# Five Card Draw in Python
 
-Welcome to **Five Card Draw**, a poker game built entirely in Python.
-It started as my **first ever Python project**, before I knew Git or GitHub — and has grown into a showcase of my **OOP design**, **CLI development**, and **early GUI experiments**.
+A Python implementation of Five Card Draw that documents an early stage of my software-development progression, from terminal game logic into object-oriented design and GUI experimentation.
 
-This project is a **work in progress**: core game logic works, the CLI is playable, and the GUI is underway. The unfinished edges are intentional — they highlight my learning curve, problem-solving process, and commitment to building real projects.
+## Why this project matters
 
----
+This began as my first substantial Python project before I had experience with Git or GitHub. I keep it public because it shows the progression from learning syntax to organizing a program around reusable objects, game state, and multiple interfaces.
 
-## 🎯 Project Overview
+## Current implementation
 
-Classic **Five Card Draw poker**, designed with:
+The project includes:
 
-* Clean object-oriented classes (`Card`, `Deck`, `Player`, `Game`)
-* A playable CLI loop
-* A GUI prototype using **Tkinter** (with future plans for polish)
-* Expandable architecture for AI, betting, and more
+- object-oriented card, deck, player, and game logic
+- a playable command-line game loop
+- hand dealing and round reset behavior
+- basic CPU behavior
+- fold and discard mechanics
+- an early Tkinter GUI prototype
 
----
+The command-line version represents the most complete path. The GUI remains experimental and is not presented as a finished application.
 
-## ✅ Current Features
+## Engineering concepts demonstrated
 
-### 🧠 Core Logic
+- Python fundamentals
+- object-oriented programming
+- separation of game rules from interface code
+- state transitions across rounds
+- randomized deck behavior
+- CLI interaction
+- early GUI development with Tkinter
+- iterative refactoring of a learning project
 
-* Deal phase: player + CPU receive 5 cards
-* Player can **play or fold**
-* Discard phase (WIP): GUI allows selection, but logic still forces discard
-* Basic CPU behavior
+## Run the project
 
-### 🖥️ CLI Version
+Requirements depend on the interface being used. The GUI work uses Tkinter and Pillow in addition to Python.
 
-* Fully playable in terminal
-* Card dealing, hand evaluation, and round resets
+For the command-line implementation, run the relevant game entry point from the repository after installing any required dependencies.
 
-### 🎴 GUI Progress
+## Project status
 
-* Main Menu screen (Tkinter)
-* Poker felt background + Royal Flush placeholder title
-* Start Game popup with:
+This repository is preserved primarily as a learning-history project rather than a current flagship portfolio piece. Some GUI behaviors remain incomplete, including portions of discard handling and game-screen presentation.
 
-  * Name input
-  * Player count (2–4)
-* Buttons for **Start Game**, **Rules**, **Exit**
-* Modular GUI setup (`gui_units.py`)
+That unfinished state is documented rather than hidden. Newer projects in my portfolio provide stronger evidence of production-style validation, persistence, automation, analytics, and reliability practices.
 
----
+## Author
 
-## 🛠️ Work in Progress
+Robert Sory
 
-### What works:
+Portfolio: https://shortview231.github.io/
 
-* Dealing, folding, discarding (partially), and restarting rounds
-* CLI end-to-end play
-
-### What I’m still fixing:
-
-* GUI **discard logic**: need to allow “keep all cards”
-* GUI **game screen**: show player + CPU hands properly
-* Betting system (planned, not implemented yet)
-
----
-
-## 📌 Roadmap
-
-* [ ] Fix discard logic (don’t force discard)
-* [ ] Expand GUI for full gameplay
-* [ ] Add CPU strategy for discards/betting
-* [ ] Hand evaluation tie-breaks
-* [ ] Visual polish: custom cards, animations, chip sounds
-* [ ] Package as `.exe` / `.app` for easy sharing
-
----
-
-## 🚀 How to Run
-
-### Requirements
-
-* Python 3.10+
-* Tkinter (comes standard)
-* Pillow (for image scaling/rotation in GUI)
-
-### Run CLI Game
-
-```bash
-python3 game.py
-```
-
-### Run GUI Prototype
-
-```bash
-python3 gui.py
-```
-
----
-
-## 📂 Folder Structure
-
-```
-five-card-draw-py/
-│── src/
-│   ├── card.py        # Card class
-│   ├── deck.py        # Deck class
-│   ├── player.py      # Player logic
-│   ├── game.py        # CLI loop
-│   └── gui.py         # GUI prototype
-│
-│── assets/
-│   ├── screenshots/
-│   │   ├── start.png
-│   │   ├── deal.png
-│   │   └── discard.png
-│   └── cards/         # Card image assets
-│
-│── README.md
-│── requirements.txt
-```
-
----
-
-## 📸 Screenshots *(to add)*
-
-* Start Screen
-* Deal Phase
-* Discard Phase (WIP)
-
----
-
-## ✍️ Author
-
-**Robert Sory Jr. (RJ)**
-
-* Portfolio: [shortview231.github.io](https://shortview231.github.io/)
-* GitHub: [@shortview231](https://github.com/shortview231)
-* LinkedIn: [Robert Sory Jr.](https://www.linkedin.com/in/robert-sory-1ab752213)
+LinkedIn: https://www.linkedin.com/in/robert-sory-1ab752213
